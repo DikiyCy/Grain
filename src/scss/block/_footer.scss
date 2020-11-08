@@ -1,0 +1,138 @@
+.footer {
+    background-color: #151515;
+
+    .container {
+        min-height: 299px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-flow: row wrap;
+        padding-top: 66px;
+        padding-bottom: 57px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+
+        .logo {
+
+            &__1 {
+                width: 29px;
+                height: 43px;
+                background: url('../img/SVG/logo2.svg') center center/cover no-repeat;
+                margin-right: 14px;
+            }
+
+            &__2 {
+                width: 113px;
+                height: 32px;
+                background: url('../img/SVG/logo3.svg') center center/cover no-repeat;
+                margin-right: 80px;
+            }
+        }
+
+    }
+
+
+    &__line {
+        width: 100%;
+        height: 2px;
+        background-color: #282a29;
+        margin: 39px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    &__mail {
+        margin-right: 30px;
+        margin-bottom: 10px;
+
+        &_logo {
+            width: 37px;
+            height: 26px;
+            background: url('../img/sprite_small.png') center center/cover no-repeat;
+            background-position: -73px -42px;
+            background-size: 417px,303.5px;
+            background-repeat: no-repeat;
+            margin-right: 16px;
+        }
+
+        &_address {
+            font-family: 'MuseoSansCyrl';
+            font-size: 21px;
+            line-height: 26px;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            color: #525252;
+            text-decoration: none;
+            vertical-align: bottom;
+        }
+
+    }
+
+    &__copy {
+        display: block;
+        font-family: 'MuseoSansCyrl';
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 100;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        transform: translateY(4px);
+
+    }
+}
+
+
+@media (max-width:575px) {
+    .footer {
+
+        .container {
+            padding-top: 50px;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__logo {
+            order: 1;
+
+            .logo__2 {
+                margin: 0;
+            }
+        }
+
+        &__line {
+            order: 3;
+        }
+
+        &__wrapper {
+            order: 4;
+        }
+
+        &__mail {
+
+            &_logo {
+                transform: scale(0.8);
+            }
+
+            &_address {
+                font-size: 16px;
+                margin-right: 0;
+            }
+
+        }
+
+        &__copy {
+            order: 5;
+        }
+
+    }
+}

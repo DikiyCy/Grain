@@ -1,0 +1,157 @@
+.nav {
+    // десктопный навбар
+    &__links {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &__link {
+        margin-bottom: 20px;
+
+        a {
+            font-family: 'MuseoSansCyrl';
+            font-size: 20px;
+            font-weight: 500;
+            color: #525252;
+            &:hover {
+                font-weight: 700;
+                color: #5eb785;
+            }
+        }
+
+        &:not(:last-child)   {
+            margin-right: 40px;
+        }
+    }
+
+    // мобильный навбар
+    &_mobile {
+        display: none;
+        position: relative;
+        width: 100%;
+        background-color: #fbfcfb;
+    }
+
+    &__mob-link {
+        padding: 14px 26px;
+        cursor: pointer;
+        &:hover {
+            background-color: #f1f7f5;
+        }
+
+        a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-family: 'MuseoSansCyrl';
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #000000;
+
+        }
+
+        &:nth-child(1) {
+            a {
+                font-family: 'MuseoSansCyrl';
+                font-size: 16px;
+                line-height: 1.2;
+                font-weight: 300;
+                letter-spacing: 0.02em;
+                color: #525252;
+            }
+        }
+
+    }
+
+    &__mob-icon {
+        margin-right: 15px;
+        display: inline-block;
+        width: 19px;
+        height: 19px;
+        background-image: url('../img/sprite_small.png');
+        background-repeat: no-repeat;
+        background-size: 417px,303.5px;
+
+        &_1 {
+            background-position: -199px -3px;
+        }
+
+        &_2 {
+            background-position: -224px -3px;
+        }
+
+        &_3 {
+            background-position: -249px -3px;
+        }
+
+        &_4 {
+            width: 21px;
+            background-position: -273px -3px;
+            margin-right: 13px;
+        }
+
+        &_5 {
+            background-position: -298px -5px;
+        }
+
+    }
+
+    // navbar_footer
+    &_footer {
+        margin-right: 36px;
+        margin-bottom: 40px;
+
+        .nav {
+            &__links {
+                height: 44px;
+                align-items: flex-end;
+            }
+
+            &__link {
+                margin-bottom: 0;
+                a {
+                    font-family: 'MuseoSansCyrl';
+                    font-size: 21px;
+                    line-height: 1.2;
+                    font-weight: 300;
+                    letter-spacing: 0.02em;
+                    color: #ffffff;
+                    &:hover {
+                        font-weight: 700;
+                        color: #5eb785;
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+
+        &_header {
+            display: none;
+        }
+
+        &_mobile {
+            display: block;
+        }
+
+    }
+}
+
+@media (max-width: 575px) {
+    .nav {
+
+        &_footer {
+            display: none;
+        }
+
+    }
+}

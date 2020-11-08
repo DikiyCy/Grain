@@ -1,0 +1,65 @@
+.butter {
+    display: none;
+    z-index: 5;
+    cursor: pointer;
+
+    span {
+        display: block;
+        width: 31px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #69bb8d;
+
+
+        &:nth-child(1) {
+            transform: rotate(0deg);
+            transition: transform 0.5s;
+            margin-bottom: 5px;
+        }
+
+        &:nth-child(2) {
+            background-color: #69bb8d;
+            transition: background-color 0.5s;
+            margin-bottom: 5px;
+        }
+
+        &:nth-child(3) {
+            transform: rotate(0deg);
+            transition: transform 0.5s;
+        }
+
+
+        // &:not(:last-child) {
+        //     margin-bottom: 5px;
+        // }
+
+    }
+
+}
+@media (max-width: 768px) {
+
+    .butter {
+        display: block;
+    }
+
+    .active {
+        span {
+
+            &:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+                transition: transform 0.5s;
+            }
+
+            &:nth-child(2) {
+                background-color: transparent;
+                transition: background-color 0.5s;
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+                transition: transform 0.5s;
+            }
+        }
+    }
+
+}

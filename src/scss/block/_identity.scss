@@ -1,0 +1,58 @@
+.identity {
+
+    .container {
+        padding-top: 40px;
+        position: relative;
+    }
+
+    &__bg-text {
+        position: absolute;
+        top: -70px;
+        right: 0;
+        opacity: 0.03;
+        font-family: 'MuseoSansCyrl';
+        font-size: 250px;
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #808080;
+        text-shadow: 1px 1px 10px #909090;
+        z-index: -2;
+    }
+
+    &__title {
+        font-family: 'MuseoSansCyrl';
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #525252;
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        font-family: 'MuseoSansCyrl';
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #525252;
+        margin-bottom: 16px;
+    }
+
+    &__descr {
+        font-family: 'MuseoSansCyrl';
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        color: #525252;
+        margin-bottom: 29px;
+        a {
+            color: #525252;
+        }
+    }
+
+
+}

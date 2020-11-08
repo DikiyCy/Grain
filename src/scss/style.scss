@@ -1,0 +1,81 @@
+// миксин, который вставляет правило для семейства шрифтов
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+}
+
+@import 'normalize.min';
+@import 'fonts';
+@import './owlCarusel/owl.carousel.min';
+@import './owlCarusel/owl.theme.default.min';
+
+// заготовленные стили
+body {
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    // зависит от макета
+    max-width: 1240px;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4, p, ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+a, button, input {
+    outline: transparent;
+    cursor: pointer;
+}
+
+// section
+@import './block/header';
+@import './block/main';
+@import './block/property';
+@import './block/catalog';
+@import './block/quality';
+@import './block/identity';
+@import './block/question';
+@import './block/footer';
+
+// elements
+@import './block/button';
+@import './block/navbar';
+@import './block/butter';
+@import './block/slider';
+@import './block/form';
+
+.hidden {
+    display: none;
+}
+
+
+    // background-image: url('...');
+    // background-position: 0px -210px;
+    // background-repeat: no-repeat;
+    // background-size: 50%;
+    // for sprite
+    // background-size: 417px,303.5px;

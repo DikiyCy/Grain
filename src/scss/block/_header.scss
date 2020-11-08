@@ -1,0 +1,283 @@
+.header {
+    position: relative;
+    z-index: 15;
+
+    .container {
+        padding-top: 70px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    &__bg-left {
+            width: 1280px;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 40%;
+            background-color: #dfeee5;
+            z-index: -1;
+        }
+
+    &__bg-right {
+        width: 268px;
+        height: 81px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        background: url('../img/SVG/bc_header.png') center center/cover no-repeat;
+        z-index: 1;
+    }
+
+    &__colum {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &_1 {
+            flex-flow: column wrap;
+        }
+        &_2 {
+            justify-content: flex-end;
+        }
+    }
+
+    .wrapp {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-bottom: 57px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: flex-end;
+
+        .logo {
+
+            &__1 {
+                width: 29px;
+                height: 43px;
+                background: url('../img/SVG/logo2.svg') center center/cover no-repeat;
+                margin-right: 14px;
+            }
+
+            &__2 {
+                width: 113px;
+                height: 32px;
+                background: url('../img/SVG/logo3.svg') center center/cover no-repeat;
+                margin-right: 80px;
+            }
+        }
+
+    }
+
+
+
+    &__mail {
+
+        &_logo {
+            width: 37px;
+            height: 26px;
+            background: url('../img/sprite_small.png') center center/cover no-repeat;
+            background-position: -73px -42px;
+            background-size: 417px,303.5px;
+            background-repeat: no-repeat;
+            margin-right: 16px;
+        }
+
+        &_address {
+            font-family: 'MuseoSansCyrl';
+            font-size: 21px;
+            line-height: 1.2;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            color: #525252;
+            text-decoration: none;
+        }
+
+    }
+
+    .header__lang {
+        position: relative;
+
+        &:after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 11px;
+            right: -11px;
+            content: '\25BC';
+            width: 30px;
+            height: 30px;
+            color: #98c8ae;
+            background-color: white;
+            cursor: pointer;
+        }
+
+    }
+
+    &__select {
+        display: block;
+        margin-top: 10px;
+        margin-left: 41px;
+        font-family: 'MuseoSansCyrl';
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        border: 1px solid white;
+        background-color: transparent;
+        color: #808080;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__popup {
+        display: none;
+    }
+
+    .wrapp-navbar {
+        position: relative;
+    }
+
+    .popup {
+        &__mob-socials {
+            position: absolute;
+            bottom: -14px;
+            right: 14px;
+        }
+
+        &__mob-social {
+
+            a {
+                display: block;
+                width: 24px;
+                height: 24px;
+                margin-bottom: 24px;
+                background-image: url('../img/sprite_small.png');
+                background-repeat: no-repeat;
+                background-size: 417px,303.5px;
+                border-radius: 3px;
+                &:hover {
+                    border: 1px solid #5ea77e;
+                }
+                &:focus {
+                    border: 1px solid #5ea77e;
+                }
+            }
+
+            &:nth-child(1) {
+                a {
+                    background-position: -323px -3px;
+                }
+            }
+
+            &:nth-child(2) {
+                a {
+                    background-position: -345.5px -2.5px;
+                }
+            }
+
+            &:nth-child(3) {
+                a {
+                    background-position: -371.5px -3px;
+                }
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header {
+
+        .container {
+            padding: 0px;
+            flex-wrap: wrap;
+        }
+
+        &__bg-left {
+            right: 0;
+        }
+
+        &__colum {
+            width: 100%;
+
+            &_1 {
+                padding: 20px 30px 0;
+                position: fixed;
+                background: #fff;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+
+            &_2 {
+                padding: 130px 30px 20px;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+        }
+
+        &__mail {
+            display: none;
+        }
+
+        .wrapp {
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            &__2 {
+                margin-right: 0px;
+            }
+        }
+        .header__lang {
+            &:after {
+                background-color: #dfeee5;
+            }
+        }
+
+        &__select {
+            margin-left: 0;
+            border: 1px solid #dfeee5;
+        }
+
+        &__popup {
+            display: block;
+            position: fixed;
+            top: 91px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 0px 49px;
+            z-index: 20;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    }
+}
+
+@media (max-width:540px) {
+
+    .header {
+
+        &__bg-right {
+            display: none;
+        }
+
+    }
+}

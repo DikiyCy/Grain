@@ -1,0 +1,74 @@
+.catalog {
+    overflow: hidden;
+    .container {
+        position: relative;
+        background: url("../img/SVG/bg_dark.svg") 831px 20px/100% no-repeat,
+                    url("../img/SVG/bg.svg") -740px 430px/100% no-repeat
+    }
+
+    &__title {
+        font-family: 'MuseoSansCyrl';
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #525252;
+        margin-bottom: 57px;
+    }
+    &__wrapp-text {
+        position: absolute;
+        top: 0;
+        right: 50%;
+    }
+
+    &__text {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.03;
+        font-family: 'MuseoSansCyrl';
+        font-size: 250px;
+        line-height: 1.2;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        color: #808080;
+        text-shadow: 1px 1px 10px #909090;
+    }
+
+    &__counter {
+        position: absolute;
+        bottom: 40px;
+        right: 100px;
+        font-family: 'MuseoSansCyrl';
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #5eb785;
+    }
+}
+
+@media (max-width: 995px) {
+    .catalog {
+        .container {
+            background: url("../img/SVG/bg_dark.svg") 531px 129px/100% no-repeat,
+                        url("../img/SVG/bg.svg") -640px 530px/100% no-repeat
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .catalog {
+
+        &__title {
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        &__counter {
+            display: none;
+        }
+    }
+}
